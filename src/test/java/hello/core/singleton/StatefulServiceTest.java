@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatefulServiceTest {
@@ -21,7 +22,7 @@ class StatefulServiceTest {
 
         System.out.println("userAPrice = " + userAPrice);
         System.out.println("userBPrice = " + userBPrice);
-        Assertions.assertThat(statefulService1).isEqualTo(200000);
+        assertThat(userBPrice).isEqualTo(20000);
     }
 
 
